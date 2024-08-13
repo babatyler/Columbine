@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Columbine Guest House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>The Columbine Guest House, Swakopmund, Namibia</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#rooms-rates">Rooms & Rates</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="homevideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="overlay">
+            <h2>Welcome to The Columbine Guest House</h2>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to The Columbine Guest House, your perfect getaway in Swakopmund, Namibia. Our beautiful guest house stands on a 600 square meter plot and offers 3 bedrooms for up to 7 guests. Experience comfort and tranquility in our well-equipped house, situated just 2.5 km from the beach and Platz Am Meer mall.</p>
+    </section>
+
+    <section id="rooms-rates">
+        <h2>Rooms & Rates</h2>
+        <p>Our guest house is available for booking as a whole for families or groups. The rates per night are as follows:</p>
+        <ul>
+            <li>September, October, November, January, February, March, April: R1900 (€95)</li>
+            <li>December: R2700 (€135)</li>
+            <li>May, June, July, August: R1500 (€75)</li>
+        </ul>
+        <p>Book at least 2 weeks in advance to get a 10% discount. We offer free cancellation up to 1 day before check-in, or a 20% discount if you pay a non-refundable deposit of at least 10% of the price.</p>
+    </section>
+
+    <section id="booking">
+        <h2>Booking</h2>
+        <div id="calendar"></div>
+        <form id="booking-form" action="backend/booking.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="check-in">Check-In Date:</label>
+            <input type="date" id="check-in" name="check_in" required>
+
+            <label for="check-out">Check-Out Date:</label>
+            <input type="date" id="check-out" name="check_out" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Cell & WhatsApp: <a href="tel:+264814741064">+264814741064</a>, <a href="tel:+264816294202">+264816294202</a>, <a href="tel:+264814574463">+264814574463</a></p>
+            <p>Email: <a href="mailto:4columbineswk@gmail.com">4columbineswk@gmail.com</a></p>
+            <p><a href="https://www.facebook.com/profile.php?id=61563467471836&mibextid=ZbWKwL">Visit our Facebook Page</a></p>
+            <p><a href="https://wa.me/264814741064">Chat with us on WhatsApp</a></p>
+        </div>
+        
+        <div class="payment-methods">
+            <h3>Accepted Payment Methods</h3>
+            <p>We accept EFT, E-Wallet, Cash, and Swiping with Speed Point Machine (VISA, American Express, MasterCard).</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31456.3375149482!2d14.523228811562468!3d-22.67863921999408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c1f3d8dbfec29%3A0x920e0a2b19f9a6a8!2sPlatz%20Am%20Meer%2C%20Swakopmund%2C%20Namibia!5e0!3m2!1sen!2sus!4v1693488531203!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <!-- Include up to 30 images -->
+            <img src="photo1.jpg" alt="house">
+            <img src="photo2.jpg" alt="House2">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Cell & WhatsApp: <a href="tel:+264814741064">+264814741064</a>, <a href="tel:+264816294202">+264816294202</a>, <a href="tel:+264814574463">+264814574463</a></p>
+            <p>Email: <a href="mailto:4columbineswk@gmail.com">4columbineswk@gmail.com</a></p>
+            <p><a href="https://www.facebook.com/profile.php?id=61563467471836&mibextid=ZbWKwL">Visit our Facebook Page</a></p>
+            <p><a href="https://wa.me/264814741064">Chat with us on WhatsApp</a></p>
+        </div>
+        <div class="map">
+            <h3>Find Us Here</h3>
+            <iframe src="https://maps.app.goo.gl/MXtTncNAD4UrDsjGA?g_st=ac" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="payment-methods">
+            <h3>Accepted Payment Methods</h3>
+            <p>We accept EFT, E-Wallet, Cash, and Swiping with Speed Point Machine (VISA, American Express, MasterCard).</p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                events: 'backend/fetch_booked_dates.php',
+                eventColor: '#FF5733', // Change the color of the booked dates
+                selectable: true,
+                selectHelper: true,
+                editable: false,
+                displayEventTime: false,
+                select: function(start, end) {
+                    var check = start.format("YYYY-MM-DD");
+                    var today = moment().format("YYYY-MM-DD");
+                    if (check < today) {
+                        $('#calendar').fullCalendar('unselect');
+                        alert("You cannot book past dates.");
+                    } else {
+                        $('#check-in').val(start.format("YYYY-MM-DD"));
+                        $('#check-out').val(end.format("YYYY-MM-DD"));
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
